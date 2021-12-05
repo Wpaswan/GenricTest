@@ -2,6 +2,7 @@
 Console.WriteLine("-----------------------please select any            ----------------------------");
 Console.WriteLine("-----------------------1.Maximum between three integer----------------------------");
 Console.WriteLine("-----------------------2.Maximum between three float__----------------------------");
+Console.WriteLine("-----------------------3.Maximum between three String__----------------------------");
 int choice=Convert.ToInt32(Console.ReadLine());
 switch (choice) {
     case 1:
@@ -35,7 +36,25 @@ else
     Console.WriteLine("Maximum among three:"+maxfloat);
 }
         break;
-        default:
+    case 3:
+        Console.WriteLine("Enter three words:");
+        string word1=Console.ReadLine();
+        string word2 = Console.ReadLine();
+        string word3 = Console.ReadLine();
+
+        
+        string maxString = ComparisonOf3Numbers.FindMaxFloatNumber(word1, word2, word3);
+
+        if (maxString==null)
+        {
+            Console.WriteLine("All three numbers are equal!!!");
+        }
+        else
+        {
+            Console.WriteLine("Maximum among three:"+maxString);
+        }
+        break;
+    default:
         Console.WriteLine("Please select a valid one!!");
         break;
 }
